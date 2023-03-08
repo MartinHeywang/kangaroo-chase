@@ -1,0 +1,91 @@
+main {
+    background-color: #222;
+    color: #eee;
+}
+
+$expand-button-width: 1.5rem;
+
+.config-panel {
+    display: grid;
+    grid-template-columns: 1fr $expand-button-width;
+    grid-template-rows: 1fr;
+    height: 100%;
+    width: min(100vw, 25em);
+
+    position: relative;
+    background-color: #111;
+
+    transition: translate 150ms ease-in-out;
+
+    .config {
+        grid-column: 1 / 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        padding: 1rem;
+    }
+
+    .expand {
+        grid-column: 2 / 3;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 0;
+        background-color: transparent;
+        color: #eee;
+
+        &:hover {
+            background-color: #181818;
+            cursor: pointer;
+        }
+
+        &:focus-visible {
+            color: crimson;
+            outline: 1px solid;
+            outline-offset: -1px;
+        }
+
+        &::after {
+            content: "";
+
+            border: 8px solid transparent;
+            border-right-color: currentColor;
+            translate: -4px 0;
+        }
+    }
+}
+
+.config-panel--closed {
+    translate: calc(-1 * (100% - $expand-button-width)) 0;
+
+    .expand::after {
+        border-left-color: currentColor;
+        border-right-color: transparent;
+        translate: 4px 0;
+    }
+}
+
+.config__editable-message {
+    font-size: 1rem;
+    font-style: italic;
+    margin: .5em 0;
+    color: #bbb;
+}
+
+.config__option {
+    display: flex;
+    align-items: center;
+    gap: .2em;
+    padding: .5em 0;
+
+    // the second child is the editable field
+    & > :nth-child(2) {
+        flex-grow: 1;
+    }
+
+    font-size: 1.5rem;
+}

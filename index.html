@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="./src/scss/main.scss" />
+        <script type="module" src="/src/ts/main.ts" defer></script>
+
+        <title>Chasse aux kangourous &bull; Math En Jeans</title>
+    </head>
+    <body>
+        <noscript
+            ><p class="noscript-message">
+                Cette application requiert JavaScript pour fonctionner. <br />Active-le
+                dans les paramètres du navigateur, puis recharge la page&nbsp;!
+            </p></noscript
+        >
+
+        <div class="top-bar">
+            <h1 class="top-bar__title">Chasse aux kangourous</h1>
+            <a class="top-bar__link" href="https://github.com/martinheywang/kangaroo-chase">GitHub</a>
+        </div>
+        
+        <main>
+            <div class="config-panel">
+                <div class="config">
+                    <h2 class="config_title">Configuration</h2>
+                    <p class="config__editable-message">Clique sur une valeur pour la mettre à jour.</p>
+
+                    <div class="config__option" data-option="s" data-default="2"></div>
+                    <div class="config__option" data-option="{\Delta}t" data-default="1"></div>
+                </div>
+                <button class="expand"></button>
+            </div>
+        </main>
+    </body>
 </html>

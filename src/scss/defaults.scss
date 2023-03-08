@@ -1,0 +1,19 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    width: 100dvw;
+
+    font-family: Inter, sans-serif;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}

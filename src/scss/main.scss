@@ -1,0 +1,31 @@
+@use "./defaults.scss";
+
+@use "./top-bar.scss";
+@use "./simulator.scss";
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    > main {
+        flex-grow: 1;
+    }
+}
+
+.noscript-message {
+    display: grid;
+    place-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    width: 100dvw;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0;
+
+    background-color: black;
+    color: crimson;
+    font-size: 1.3rem;
+}
