@@ -85,10 +85,10 @@ $expand-button-width: 1.5rem;
     // the second child is the editable field
     & > :nth-child(2) {
         flex-grow: 1;
-        background-color: #333;
+        background-color: #222;
         border-bottom: 1px solid #eee;
         cursor: text;
-        padding: .1em .2em;
+        padding: .2em;
 
         &:focus {
             outline: none;
@@ -97,4 +97,8 @@ $expand-button-width: 1.5rem;
     }
 
     font-size: 1.5rem;
+
+    &--incorrect > :nth-child(2) {
+        background-color: mix(#333, darkred, 80%);
+    }
 }
